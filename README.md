@@ -1,2 +1,2 @@
 # ToDo-List
- My first project in my git
+ My first MVC ASP.NET Core project in my git
