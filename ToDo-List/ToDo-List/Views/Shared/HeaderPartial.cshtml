@@ -1,0 +1,28 @@
+﻿
+
+
+
+
+
+
+<a class="navbar-brand" asp-area="" asp-controller="ToDo" asp-action="Index">ToDo_List</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="text-align:right;">
+    
+        @if(ToDo_List.Controllers.AccountController.user == null){
+         <a class="btn btn-light" style="display: inline-block;text-align: start;" asp-controller="Account" asp-action="Login">LogIn</a>
+         <a class="btn btn-light" style="display: inline-block;text-align: start;" asp-action="Register" asp-controller="Account">SignIn</a>
+            <a class="btn btn-light" style="display: none;" asp-controller="Account" asp-action="Logout" >Logout</a>
+        }
+        else
+        { 
+            <a class="btn btn-light" style="display: none;" asp-controller="Account" asp-action="Login">LogIn</a>
+            <a class="btn btn-light" style="display: none;" asp-action="Register" asp-controller="Account">SignIn</a>
+            <a class="btn btn-light" style="display: inline-block;text-align: start;" asp-controller="Account" asp-action="Logout" >Logout</a>
+        }
+    </div>                
+</div>
